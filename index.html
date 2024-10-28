@@ -43,16 +43,16 @@
         }
         nav {
     background-color: #0e0e0e;
-    padding: 5px 5px; /* Adjust padding to reduce size */
+    padding: 5px 5px;
     text-align: center;
-    position: fixed;  /* This makes the navbar fixed at the top */
-    top: 0;  /* Ensure it stays at the top */
-    width: 100%;  /* Make sure it spans the width of the page */
-    z-index: 1000;  /* Ensure it appears above other elements */
+    position: fixed;  
+    top: 0;  
+    width: 100%;  
+    z-index: 1000;  
 }
 
 body {
-    padding-top: 0px; /* Adjust padding so content doesn’t overlap the navbar */
+    padding-top: 0px; 
 }
 
 
@@ -165,23 +165,18 @@ body {
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
                 <title><h1>الوضع الليلي</h1> </title>
-                <style>
-                    /* تنسيقات الوضع العادي */
+                <style>                
                     body {
                         background-color: #ffffff;
                         color: #000000;
                         font-family: Arial, sans-serif;
-                        transition: background-color Transparent ;
-                        
+                        transition: background-color Transparent ;                      
                     }
-            
-                    /* تنسيقات الوضع الليلي */
+        
                     .dark-mode {
                         background-color: #121212;
                         color: #ffffff;
                     }
-            
-                    /* تنسيقات الزر */
                     button {
                         padding: 10px 10px;
                         margin: px;
@@ -193,10 +188,7 @@ body {
                 </style>
             </head>
             <body>
-                     
-                <!-- زر لتبديل الوضع الليلي -->
-            
-                <button onclick="toggleDarkMode()"> <h1>NIGHT MODE</h1></button>
+                      <button onclick="toggleDarkMode()"> <h1>NIGHT MODE</h1></button>
             
                 <script>
                     function toggleDarkMode() {
@@ -230,12 +222,12 @@ body {
 
 
 
-        <video width="500" height="400" controls autoplay muted>
+        <video width="700" height="400" controls autoplay muted>
             <source src="VID\10.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video><br>
         
-   </section>
+    </section>
 
     <section id="trousers" class="container">
         <hr><h2>⭕Trousers👖</h2>
@@ -279,12 +271,10 @@ body {
 
 
 
-
-
        
        
        
-      <section id="T-shirts" class="container">
+        <section id="T-shirts" class="container">
             <hr> <h2>⭕T-shirts👕</h2>
 
             <div class="T-shirts">
@@ -334,7 +324,7 @@ body {
 
 
 
-          <section id="shoes" class="container">
+            <section id="shoes" class="container">
                 <hr> <h2>⭕Shoes👟</h2>
     
                 <div class="shoes">
@@ -375,7 +365,6 @@ body {
                 </div>
 
 
-
     </section>
 
    <section id="contact" class="container">
@@ -400,7 +389,7 @@ body {
                 </form>
             
                 <div id="commentsList">
-                    <!-- هنا ستظهر التعليقات الجديدة -->
+                  
                 </div>
             </section>
             
@@ -430,49 +419,45 @@ body {
                 }
             
                 document.getElementById('commentForm').addEventListener('submit', function(event) {
-                    event.preventDefault(); // منع إعادة تحميل الصفحة
+                    event.preventDefault(); 
             
                     const commentText = document.getElementById('comment').value;
                     const name = document.getElementById('name').value;
             
                     const comment = { text: commentText, name: name };
-            
-                    // حفظ التعليق في Local Storage
+    
                     saveComment(comment);
             
-                    // إضافة التعليق إلى الصفحة
                     addCommentToDOM(comment, document.getElementById('commentsList').children.length);
             
-                    // مسح خانة التعليق بعد الإرسال
                     document.getElementById('comment').value = '';
                     document.getElementById('name').value = '';
                 });
             
                 function deleteComment(index) {
                     const comments = JSON.parse(localStorage.getItem('comments')) || [];
-                    comments.splice(index, 1); // حذف التعليق
+                    comments.splice(index, 1); 
             
                     localStorage.setItem('comments', JSON.stringify(comments));
-                    reloadComments(); // إعادة تحميل التعليقات
+                    reloadComments(); 
                 }
             
                 function editComment(index) {
                     const comments = JSON.parse(localStorage.getItem('comments')) || [];
                     const comment = comments[index];
             
-                    document.getElementById('comment').value = comment.text; // تعيين نص التعليق في خانة التعليق
-                    document.getElementById('name').value = comment.name; // تعيين الاسم في خانة الاسم
-                    
-                    // حذف التعليق الحالي بعد تعديله
+                    document.getElementById('comment').value = comment.text; 
+                    document.getElementById('name').value = comment.name; 
+                 
                     deleteComment(index);
                 }
             
                 function reloadComments() {
-                    document.getElementById('commentsList').innerHTML = ''; // مسح التعليقات الحالية
-                    loadComments(); // تحميل التعليقات الجديدة
+                    document.getElementById('commentsList').innerHTML = ''; 
+                    loadComments(); 
                 }
             
-                // تحميل التعليقات عند تحميل الصفحة
+                
                 loadComments();
             </script>
             
