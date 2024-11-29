@@ -189,20 +189,36 @@ body {
                 </style>
             </head>
             <body>
+
+
+
+
+                
                       <button onclick="toggleDarkMode()"> <h1>NIGHT MODE</h1></button>
             
-                <script>
-                    function toggleDarkMode() {
-                        document.body.classList.toggle('dark-mode');
-                    }
-                </script>
+                      <script>
+                       
+                        if (localStorage.getItem('darkMode') === 'enabled') {
+                            document.body.classList.add('dark-mode');
+                        }
+                    
+                   
+                        function toggleDarkMode() {
+                            if (document.body.classList.contains('dark-mode')) {
+                                document.body.classList.remove('dark-mode');
+                                localStorage.setItem('darkMode', 'disabled');  
+                            } else {
+                                document.body.classList.add('dark-mode');
+                                localStorage.setItem('darkMode', 'enabled');   
+                            }
+                        }
+                    </script>
+                    
+                    
             
             </body>
             </html>
-       
         </h1>
-       
-
     </header>
     
 
@@ -234,37 +250,37 @@ body {
         <hr><h2>⭕Trousers👖</h2>
         
         <div class="trousers">
-            <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/460828522_122113019066502920_328986677367860089_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=93FZKTtrwBUQ7kNvgFuNCmV&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=AsNRXJneVKO-L5DFaN70kQo&oh=00_AYBQGXD2Uz-PtxjIRR83y8yHiNCr_EYLf8wWzW9DvcgvLQ&oe=6725156E alt="Stylish Jacket">
+            <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\460847774_122113019162502920_8337203349578311589_n.jpg" alt="Stylish Jacket">
             <h3>Stylish Jacket</h3> <price>250💲</price>
             <p>Modern and trendy jacket for a sharp look.</p>
         </div>
 
         <div class="trousers">
-            <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/460882265_122113016234502920_842399307699475431_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=4ybPu9wHZQYQ7kNvgE-kvz0&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=ApiBJ-dISRIKelTi33irENi&oh=00_AYBgKVXrU9xGkVCVoxqjD11d1AjOQ39keWUYvLtb39xJkA&oe=672534D3 alt="Casual T-shirt">
+            <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\460736520_122113018586502920_5794246520066657492_n.jpg" alt="Casual T-shirt">
             <h3>Casual T-shirt</h3> <price>250💲</price>
             <p>Comfortable and breathable t-shirt for everyday wear.</p>
         </div>
 
         <div class="trousers">
-            <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/460637847_122113016738502920_4111980896298368820_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=0CFLD9Q2AV0Q7kNvgG7gZ7X&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=AXzoCtkpNYoDFLK2FE-ljD6&oh=00_AYDUJbUFxuNdF43dBXf3spKLV0dP-jz2JKkWcd7NwlayjA&oe=672532A7 alt="Casual T-shirt">
+            <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\460822820_122113018670502920_5308870549152582333_n.jpg" alt="Casual T-shirt">
             <h3>Classic Jeans</h3> <price>250💲</price>
             <p>Durable and stylish jeans, perfect for any occasion.</p>
         </div>
         
         <div class="trousers">
-            <img src=https://scontent.faly2-2.fna.fbcdn.net/v/t39.30808-6/460834501_122113016600502920_5226269794548644010_n.jpg?stp=cp6_dst-jpg&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=c86kuM592vMQ7kNvgF8OO5h&_nc_zt=23&_nc_ht=scontent.faly2-2.fna&_nc_gid=AMUwtTeCM2y39_pk-_bBIf3&oh=00_AYB2NHy8IKDb1jbBvyr9wHfiBwHz8as594DJFSWgYMzOqg&oe=67251445 alt="Leather Jacket">
+            <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\460880034_122113019114502920_101520691150881666_n.jpg" alt="Leather Jacket">
             <h3>Leather Jacket</h3> <price>250💲</price>
             <p>Premium leather jacket for a bold look.</p>
         </div>
 
         <div class="trousers">
-            <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/460985292_122113016294502920_6635149610800650087_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=CwcMq-gBYlEQ7kNvgFkUkSp&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=A2boUv1CowOwJ_IStmlHUU7&oh=00_AYCvbapPwooxVXdcp6FJHYnBGHnzpKURxRX_iAfS1xpBYA&oe=67253276 alt="Casual T-shirt">
+            <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\460458719_122113018094502920_289022218217844418_n.jpg" alt="Casual T-shirt">
             <h3>Graphic T-shirt</h3> <price>250💲</price>
             <p>Unique designs that make a statement.</p>
         </div>
 
         <div class="trousers">
-            <img src=https://scontent.faly2-2.fna.fbcdn.net/v/t39.30808-6/460846134_122113018604502920_8278329380173119850_n.jpg?stp=cp6_dst-jpg&_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yBeS43xAhJMQ7kNvgHadwtd&_nc_zt=23&_nc_ht=scontent.faly2-2.fna&_nc_gid=A6mG5emdcEU8yCIJN6hGFH1&oh=00_AYDfJUmHmMe7ns65Y4mr_sEwDyVeSC9eZIR1whsJSlKiaQ&oe=6725346E alt="Distressed Jeans">
+            <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\460847398_122113018892502920_2045184011834150930_n.jpg" alt="Distressed Jeans">
             <h3>Distressed Jeans</h3>
             <price>250💲</price>
             <p>Edgy distressed jeans for a casual style.</p>
@@ -279,37 +295,37 @@ body {
             <hr> <h2>⭕T-shirts👕</h2>
 
             <div class="T-shirts">
-                <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/457702125_122099428058502920_6809162135706772816_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=PFDeB1ahDfsQ7kNvgFeWfg7&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=AoMqJ6xXUvhUyAMaPBoeP5m&oh=00_AYB3NF9O-7eLOkgWJ4lBWeQXEK_WQ3QDKoKReOFNS64UzA&oe=67250A0E alt="Stylish Jacket">
+                <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\تيشيرتات\464520665_122121370532502920_1896089783676778038_n.jpg" alt="Stylish Jacket">
                 <h3>Stylish Jacket</h3> <price>300💲</price>
                 <p>Modern and trendy jacket for a sharp look.</p>
             </div>
     
             <div class="T-shirts">
-                <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/457385338_122100199676502920_3691002601608052919_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=833d8c&_nc_ohc=a609MMmIEiYQ7kNvgG7Stw5&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=AXkM581AGiuwcOyOfVF6Vcw&oh=00_AYBY3IVHITkyVOvk4Plobvh2qNd-TQdzA_1n9xyB_Jc4oQ&oe=67252EE4 alt="Casual T-shirt">
+                <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\تيشيرتات\464403458_122121367964502920_2526542903232292225_n.jpg" alt="Casual T-shirt">
                 <h3>Casual T-shirt</h3> <price>250💲</price>
                 <p>Comfortable and breathable t-shirt for everyday wear.</p>
             </div>
     
             <div class="T-shirts">
-                <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/457358496_122099876990502920_7409267253504252611_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=oZiUlJkz9w0Q7kNvgEmafCe&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=AMs7uz--Fr9o1zHVzWb-SY6&oh=00_AYAW11J8WymwOZlO60-uFbOb-qSxVcNt0DoQeFenOMySjw&oe=67250AAE alt="Leather Jacket">
+                <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\تيشيرتات\466682700_122125130132502920_1360752830955372548_n.jpg" alt="Leather Jacket">
                 <h3>Classic Jeans</h3> <price>350💲</price>
                 <p>Durable and stylish jeans, perfect for any occasion.</p>
             </div>
             
             <div class="T-shirts">
-                <img src=https://scontent.faly2-2.fna.fbcdn.net/v/t39.30808-6/457496540_122099877014502920_3883610841463362968_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=AY0G8v286NYQ7kNvgFWOsEy&_nc_zt=23&_nc_ht=scontent.faly2-2.fna&_nc_gid=AgQAlj8QAaePwAAjrBtZ7NE&oh=00_AYAr45u5wXzQAXh2WDW5Ok6iHWP65Cm7Fgsb-zVe-n3a2Q&oe=67250764 alt="Leather Jacket">
+                <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\تيشيرتات\466425563_122125130186502920_942551899309210726_n.jpg" alt="Leather Jacket">
                 <h3>Leather Jacket</h3> <price>350💲</price>
                 <p>Premium leather jacket for a bold look.</p>
             </div>
     
             <div class="T-shirts">
-                <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/457448666_122099878646502920_815098148546294296_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=833d8c&_nc_ohc=FV9yCWVMOuIQ7kNvgFGy4on&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=AecrUcLTTIZa2dPfiDkGKHV&oh=00_AYC1XPu7ULW6RiC5f3sILAjZZ_a2kfyyhiFVKawRINTKZg&oe=67250FC9 alt="Graphic T-shirt">
+                <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\تيشيرتات\464362728_122121368756502920_2487221414317137378_n.jpg" alt="Graphic T-shirt">
                 <h3>Graphic T-shirt</h3> <price>250💲</price>
                 <p>Unique designs that make a statement.</p>
             </div>
     
             <div class="T-shirts">
-                <img src=https://scontent.faly2-2.fna.fbcdn.net/v/t39.30808-6/457825983_122099877482502920_4533930298116978797_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=833d8c&_nc_ohc=rp3WGPJ9RMIQ7kNvgFcsXf4&_nc_zt=23&_nc_ht=scontent.faly2-2.fna&_nc_gid=Azf9EIn3_hHyJYgj_yF_qXl&oh=00_AYD77-VlwnTFr3ClzMJ53YFbsgP-Qo6dVGpir_2QLg618g&oe=67251C40 alt="Distressed Jeans">
+                <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\تيشيرتات\464476551_122121388352502920_4105831335222129875_n.jpg" alt="Distressed Jeans">
                 <h3>Distressed Jeans</h3>
                 <price>350💲</price>
                 <p>Edgy distressed jeans for a casual style.</p>
@@ -329,37 +345,37 @@ body {
                 <hr> <h2>⭕Shoes👟</h2>
     
                 <div class="shoes">
-                    <img src=https://scontent.faly2-2.fna.fbcdn.net/v/t39.30808-6/459192407_122110592006502920_6156952955027711288_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=yXnXwQUhLhwQ7kNvgHXjfFb&_nc_zt=23&_nc_ht=scontent.faly2-2.fna&_nc_gid=AzKB5eNKciJtFa3LiWh6sgV&oh=00_AYA8zZUpPuMD2nLt0supo2aWDCBl7l2Kox6MRUEFjCLRTg&oe=6725027B alt="Stylish Jacket">
+                    <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\احذيه\459611889_122110589726502920_4398872147309693204_n.jpg" alt="Stylish Jacket">
                     <h3>Stylish Jacket</h3> <price>250💲</price>
                     <p>Modern and trendy jacket for a sharp look.</p>
                 </div>
         
                 <div class="shoes">
-                    <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/459212962_122110592504502920_1081796831425563768_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=3zYPGMlIOZcQ7kNvgGTY2h_&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=Am5nRKzZZVIpo0UAmrYaoPc&oh=00_AYDULszNSqLHfN_yJv3RKBsISNph6qfmQ_HIvXnfzOE7uA&oe=6725384E alt="Casual T-shirt">
+                    <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\احذيه\459536082_122110590038502920_3368628723083617673_n.jpg" alt="Casual T-shirt">
                     <h3>Casual T-shirt</h3> <price>250💲</price>
                     <p>Comfortable and breathable t-shirt for everyday wear.</p>
                 </div>
         
                 <div class="shoes">
-                    <img src=https://scontent.faly2-2.fna.fbcdn.net/v/t39.30808-6/459638316_122110589624502920_7222539595005407095_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=6I5Q1FR1hb0Q7kNvgHcVYIO&_nc_zt=23&_nc_ht=scontent.faly2-2.fna&_nc_gid=AFrk0CA1WsCL6DWrqsXo0sO&oh=00_AYATOEpKHQy83X5FZZsdQGr4O8YY4EF2Vo09Lor_PKOw1Q&oe=67251D2F alt="Classic Jeans">
+                    <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\احذيه\459300482_122110590392502920_7948957184764285580_n.jpg" alt="Classic Jeans">
                     <h3>Classic Jeans</h3> <price>250💲</price>
                     <p>Durable and stylish jeans, perfect for any occasion.</p>
                 </div>
                 
                 <div class="shoes">
-                    <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/459401405_122110590278502920_3043647681550087245_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=mwSjCvcerCMQ7kNvgHhgpJF&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=A_adxddLQ2eGz5JSqT8zdgx&oh=00_AYC2qngkq6nbGVuOwg5WY9cQManvLh3wbCqcyEiwjKpLFg&oe=672531FA alt="Leather Jacket">
+                    <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\احذيه\459363867_122110589960502920_3382084196542721063_n.jpg" alt="Leather Jacket">
                     <h3>Leather Jacket</h3> <price>250💲</price>
                     <p>Premium leather jacket for a bold look.</p>
                 </div>
         
                 <div class="shoes">
-                    <img src=https://scontent.faly2-1.fna.fbcdn.net/v/t39.30808-6/459432075_122110592216502920_894390941799598914_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=833d8c&_nc_ohc=GVWOeJJj5eAQ7kNvgExC54b&_nc_zt=23&_nc_ht=scontent.faly2-1.fna&_nc_gid=AVAtu3yZENy-jXao86H_gYg&oh=00_AYBFHdRQp7QFTl3pA6dghO6_5iNicZ7QQfgieo0nViwGFA&oe=672533EE alt="Graphic T-shirt">
+                    <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\احذيه\459268176_122110592270502920_4357720657824019255_n.jpg" alt="Graphic T-shirt">
                     <h3>Graphic T-shirt</h3> <price>250💲</price>
                     <p>Unique designs that make a statement.</p>
                 </div>
         
                 <div class="shoes">
-                    <img src=https://scontent.faly2-2.fna.fbcdn.net/v/t39.30808-6/459536082_122110590038502920_3368628723083617673_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=833d8c&_nc_ohc=sCyWrZoUe24Q7kNvgH5CH5y&_nc_zt=23&_nc_ht=scontent.faly2-2.fna&_nc_gid=AeYpfiZyOL_Y38kE3gizI42&oh=00_AYAnhMgm9c9xsmUmTHO6bS39CXlFcXJxKanMH3UXrM8kzw&oe=67251EC8 alt="Distressed Jeans">
+                    <img src="C:\Users\y\Desktop\FACULTY\HAMOUDA\WEBSITE🔴 T.N.T 🔴STORE\IMAGES\احذيه\459212416_122110590488502920_56576820103877691_n.jpg" alt="Distressed Jeans">
                     <h3>Distressed Jeans</h3>
                     <price>250💲</price>
                     <p>Edgy distressed jeans for a casual style.</p>
@@ -491,3 +507,10 @@ body {
         <p>With a wide selection of clothing and new collections arriving every season, T.N.T STORE ensures that you always find something that suits your style. Whether you're looking for a casual t-shirt or the perfect pair of jeans, we've got you covered.</p>
     </section>
 </footer>
+
+
+
+
+
+
+
